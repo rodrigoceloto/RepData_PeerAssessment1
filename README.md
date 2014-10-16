@@ -1,4 +1,4 @@
 ## ReadMe
 
-The file PA1_template.Rmd is the rMarkDown file of the project. The compiled HTML file is PA1_template.html.
+The rMarkDown file for Peer Assessment of this project is PA1_template.Rmd and the compiled HTML file is PA1_template.html.
 
