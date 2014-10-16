@@ -102,7 +102,9 @@ is_na
 ## [1] 2304
 ```
 
-The missing values were filled with the average of the interval. The histogram below show that distribution did not change very much after filling missing data.
+The missing values were filled with the average of the interval. 
+
+The histogram below show that distribution of the number of steps per day changed a little after filling missing data.
 
 ```r
 base_filled<-merge(base,base_interval,x.interval=y.interval)
@@ -133,7 +135,8 @@ median(base_day_filled$steps_day,na.rm=TRUE)
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-The difference between weekend and weedays can be seen in the chart below:
+The difference between weekend and weedays can be seen in the chart below. It can be verified visually that weekdays have more steps and also have more variance than weekend.
+
 
 ```r
 base_filled$weekday<-weekdays(as.Date(base_filled$date))
@@ -150,4 +153,3 @@ ggplot(base_day_filled_week, aes(x=interval, y=steps_day))+
 
 ![plot of chunk unnamed-chunk-11](./PA1_template_files/figure-html/unnamed-chunk-11.png) 
 
-It can be verified visually that weekdays have more steps and also have more variance than weekend.
